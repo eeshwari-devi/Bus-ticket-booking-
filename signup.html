@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Validation</title>
+<style>
+    :root {
+    --header-height: 3rem;
+    --font-semi: 600;
+    /*===== Colors =====*/
+    /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
+    /* HSL color mode */
+    --hue-color: 340;
+    --first-color: hsl(var(--hue-color), 89%, 60%);
+    --second-color: hsl(var(--hue-color), 56%, 12%);
+    /*===== Font typography =====*/
+    --body-font: 'Poppins', sans-serif;
+    --big-font-size: 2rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: .938rem;
+    --smaller-font-size: .75rem;
+    /*===== Margins =====*/
+    --mb-2: 1rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+    --z-back: -10;
+    --z-fixed: 100;
+}
+   /* Basic styling for demonstration */
+   body {
+     font-family: Arial, sans-serif;
+   }
+   .form-container {
+     max-width: 400px;
+     margin: 0 auto;
+   }
+   input {
+    width: 100%;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi);
+    padding: 1rem;
+    border-radius: .5rem;
+    border: 2px solid var(--second-color);
+    outline: none;
+    margin-bottom: var(--mb-4);
+    transition: border .3s;
+    resize: none;
+   }
+   .error-message {
+     color: red;
+     font-size: 14px;
+   }
+   h2{
+    color: rgba(0, 0, 0, 0.877);
+   }
+   button[type="submit"]{
+    background-color: palevioletred; /* Green background */
+    border: none; /* Remove border */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Display as inline-block */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px; /* Margin */
+    transition-duration: 0.4s; /* Animation speed */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 8px; /* Rounded corners */
+}
+button[type="submit"]:hover{
+    background-color: pink;
+}
+#toggle-button{
+    background-color: palevioletred; /* Green background */
+    border: none; /* Remove border */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Display as inline-block */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px; /* Margin */
+    transition-duration: 0.4s; /* Animation speed */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 8px; /* Rounded corners */
+}
+
+   
+   
+   
+</style>
+</head>
+<body>
+<div class="form-container">
+<!-- Signup Form -->
+<form id="signup-form">
+<h2><center>Sign Up</center></h2>
+<input type="text" id="signup-username" placeholder="Username">
+<input type="email" id="signup-email" placeholder="Email">
+<input type="password" id="signup-password" placeholder="Password">
+<input type="password" id="signup-confirm-password" placeholder="Confirm Password">
+<button type="submit" onclick="validateSignupForm()">Sign Up</button>
+<p id="signup-error" class="error-message"></p>
+</form>
+<!-- Login Form -->
+<form id="login-form" style="display: none;">
+<h2>Login</h2>
+<input type="text" id="login-username" placeholder="Username">
+<input type="password" id="login-password" placeholder="Password">
+<button type="submit" >Login</button>
+<p id="login-error" class="error-message"></p>
+</form>
+<button id="toggle-button">already have an account?</button>
+</div>
+<script>
+ // Function to validate signup form
+function validateSignupForm() {
+  const username = document.getElementById('signup-username').value;
+  const email = document.getElementById('signup-email').value;
+  const password = document.getElementById('signup-password').value;
+  const confirmPassword = document.getElementById('signup-confirm-password').value;
+  if (!username || !email || !password || !confirmPassword) {
+    document.getElementById('signup-error').textContent = 'All fields are required';
+    return false;
+  }
+  if (password !== confirmPassword) {
+    document.getElementById('signup-error').textContent = 'Passwords do not match';
+    return false;
+  }
+  document.getElementById('signup-form').addEventListener('submit', function() {
+  window.location.href = 'booking.html';
+});
+}
+
+// Function to validate login form
+function validateLoginForm() {
+  const username = document.getElementById('login-username').value;
+  const password = document.getElementById('login-password').value;
+  if (!username || !password) {
+    document.getElementById('login-error').textContent = 'Username and password are required';
+    return false;
+  }
+  document.getElementById('login-form').addEventListener('submit', function() {
+  window.location.href = 'booking.html';
+});
+}
+
+// Toggle between signup and login forms
+function toggleForms() {
+  const signupForm = document.getElementById('signup-form');
+  const loginForm = document.getElementById('login-form');
+  if (signupForm.style.display === 'block') {
+    signupForm.style.display = 'none';
+    loginForm.style.display = 'block';
+    document.getElementById('toggle-button').textContent = 'Switch to Sign Up';
+  } else {
+    signupForm.style.display = 'block';
+    loginForm.style.display = 'none';
+    document.getElementById('toggle-button').textContent = 'Switch to Login';
+  }
+}
+
+// Event listeners for form submission
+document.getElementById('signup-form').addEventListener('submit', function(event) {
+  if (!validateSignupForm()) {
+    event.preventDefault();
+  }
+});
+
+document.getElementById('login-form').addEventListener('submit', function(event) {
+  if (!validateLoginForm()) {
+    event.preventDefault();
+  }
+});
+
+// Redirect to something.html after form submission
+
+
+
+
+// Event listener for toggle button
+document.getElementById('toggle-button').addEventListener('click', function() {
+  toggleForms();
+});
+ 
+</script>
+
+</body>
+</html>

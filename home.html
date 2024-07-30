@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Document title -->
+        <title>Bus Ticket Booking</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <!-- Link to external stylesheet -->
+        <link rel="stylesheet" href="homepage.css">
+        
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    </head>
+    <body>
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <a href="#home">
+                <h1 class="nav_logo">SafeTravels</h1>
+            </a>
+            
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">FAQs</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Feedback</a></li>   
+                    <li class="nav__item"><a href="signup.html" class="nav__link">Login/SignUp</a></li>                    
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+    <main class="l-main">
+        <!--===== HOME =====-->
+        <section class="home bd-grid" id="home">
+            <div class="home__data">
+                <h1 class="home__title">Welcome,<br>To<span class="home__title-color"> SafeTravels</span><br>Let's book your tickets! </h1>
+                    <div class="home__data">
+                        <a href="booking.html" class="button">Get Started</a>
+                    </div>
+                    <div class="home__img">
+                        <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <mask id="mask0" mask-type="alpha">
+                                <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                            </mask>
+                            <g mask="url(#mask0)">
+                                <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                                <image class="home__blob-img" x="35" y="50"  href="static/images/perfill.png"/>
+
+                            </g>
+                        </svg>
+                    </div>
+            </div>
+            <div class="notifications"></div>
+            <div class="buttons">
+                <button class="btn" id="success">Success</button>
+                <button class="btn" id="error">Error</button>
+                <button class="btn" id="warning">Warning</button>
+                <button class="btn" id="info">Info</button>
+              </div>
+           
+            
+        </section>
+
+        <!--===== ABOUT =====-->
+        <section class="about section " id="about">
+            <h2 class="section-title">About</h2>
+
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img src='about.jpg' alt="">
+                </div>
+                    
+                <div>
+                    <h2 class="about__subtitle">SafeTravels</h2>
+                    <p class="about__text">
+                        SafeTravels redefines your journey with a commitment to the ultimate booking experience. We prioritize seamless, convenient, and personalized travel ticket processes. Dedicated to modernization, we ensure every step is a breeze for a hassle-free booking experience.
+                    </p>    
+                    <p class="about__text">SafeTravels's mission is clear: to offer you the best booking experience. Through cutting-edge technology, we streamline the process, ensuring efficiency in planning your travels. Whether it's a business trip, family vacation, or spontaneous adventure, SafeTravels is dedicated to enhancing every aspect of your journey.
+                    </p>
+                       
+                </div>                                   
+            </div>
+        </section>
+
+        <!--===== SKILLS =====-->
+        <section class="skills section" id="skills">
+            <h2 class="section-title">FAQs</h2>
+
+            <h1><center>Get our Tickets</center></h1>
+    <ul>
+        <li>
+            
+            <span class="step-content">
+                <strong><center>Step 1:</strong> Search your bus. Choose your origin, destination, and journey dates and search for buses.</center>
+            </span>
+        </li>
+        <li>
+            
+            <span class="step-content">
+                <strong><center>Step 2:</strong> Choose the ticket. Choose your origin, destination, and a bus for your great journey dates and search for buses.</center>
+            </span>
+        </li>
+        <li>
+           
+            <span class="step-content">
+                <strong><center>Step 3:</strong> Pay bill. Choose your origin, destination, and a bus for your great journey dates and search for buses.</center>
+            </span>
+        </li>
+    </ul><br>
+
+
+   
+        <div class="skills-container">
+          <h2><center>Our Amenities</center></h2>
+          <p><center>We offer a variety of amenities to make your journey more comfortable.</center></p>
+          <div class="skills-amenity-cards">
+            <div class="skills-amenity-card">
+                <div class="row">
+                    <div class="Column"> 
+                        <img src="icon.jpg" alt="Wifi icon">
+                        <h3><center>Wifi</center></h3>
+                    </div>
+                    <div class="skills-amenity-card">
+                        <img src="bed.jpg" alt="Pillow icon">
+                        <h3><center>Blanket</center></h3>
+                      </div>
+                      <div class="skills-amenity-card">
+                        <img src="water.jpg" alt="Water bottle icon">
+                        <h3><center>Water Bottle</center></h3>
+                      </div>
+                </div>
+            </div>
+ 
+          </div>
+        </div>
+      </section>
+       
+
+        
+        
+
+        <!--===== CONTACT =====-->
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Feedback</h2>
+
+            <div class="contact__container bd-grid">
+                <form action="" class="contact__form">
+                    <input type="text" placeholder="Name" class="contact__input" id="name">
+                    <input type="mail" placeholder="Email" class="contact__input" id="email">
+                    
+                    <textarea  id="message" placeholder="Enter your feedback.." cols="0" rows="10" class="contact__input"></textarea>
+                    <input type="button" onclick="sendMail()" value="Send" class="contact__button button">
+                </form>
+            </div>
+        </section>
+    </main>
+
+      <!--===== FOOTER =====-->
+ <footer>
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><a href="">Email:safetravels@gmail.com</a></li>
+                    <li><a href="">Phone: 9829179423/9902285911</a></li>
+                    <li><a href="">Address: Bengaluru, Karnataka</a></li>
+                </ul>
+            </div>
+            
+            <!-- 1st Column -->
+            <div class="col2">
+                <p>SafeTravels</p>
+            </div>
+
+            <!-- 2nd Column -->
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <ul class="social-icons">
+                 <li><a href="https://www.facebook.com/profile.php?id=61558352728886"><i class="fab fa-facebook"></i></a></li>
+                
+                 <li><a href="https://www.instagram.com/safetravels14/"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col1">
+                <p>&#169; SafeTravels. All rights reserved.</p>
+            </div>
+        </div>
+        </div>
+    </div>
+        </footer>
+				
+<script>
+const showMenu = (toggleId, navId) =>{
+    const toggle = document.getElementById(toggleId),
+    nav = document.getElementById(navId)
+
+    if(toggle && nav){
+        toggle.addEventListener('click', ()=>{
+            nav.classList.toggle('show')
+        })
+    }
+}
+showMenu('nav-toggle','nav-menu')
+
+/*==================== REMOVE MENU MOBILE ====================*/
+const navLink = document.querySelectorAll('.nav__link')
+
+function linkAction(){
+    const navMenu = document.getElementById('nav-menu')
+    // When we click on each nav__link, we remove the show-menu class
+    navMenu.classList.remove('show')
+}
+navLink.forEach(n => n.addEventListener('click', linkAction))
+
+/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+const sections = document.querySelectorAll('section[id]')
+
+function scrollActive(){
+    const scrollY = window.pageYOffset
+
+    sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 50;
+        sectionId = current.getAttribute('id')
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active')
+        }else{
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active')
+        }
+    })
+}
+window.addEventListener('scroll', scrollActive)
+
+/*===== SCROLL REVEAL ANIMATION =====*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2000,
+    delay: 200,
+//     reset: true
+});
+
+sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
+sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
+sr.reveal('.home__social-icon',{ interval: 200}); 
+sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+</script>
+<script>
+   function sendMail() {
+    // Get form values
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    // Validate form fields
+    if (!name || !email || !message) {
+        createToast('error', 'fa-solid fa-circle-exclamation', 'Error', 'All fields are required.');
+            return;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            // Display a toast notification for invalid email
+            createToast('error', 'fa-solid fa-circle-exclamation', 'Error', 'Invalid email address.');
+            return;
+        }
+    let parms = {
+        name: name,
+        email: email,
+        message: message,
+    };
+
+    // Send email using EmailJS
+    emailjs.send("service_5wr48mf", "template_ghrb405", parms)
+        .then(() => {
+            createToast('success', 'fa-solid fa-circle-check', 'Success', 'Thank you for your feedback!');
+        })
+        .catch((error) => {
+            console.error("Error sending email:", error);
+            createToast('error', 'fa-solid fa-circle-exclamation', 'Error', 'Error sending email.');
+            });
+        
+}
+
+
+</script>
+<script>
+    let notifications = document.querySelector('.notifications');
+    let success = document.getElementById('success');
+    let error = document.getElementById('error');
+    let warning = document.getElementById('warning');
+    let info = document.getElementById('info');
+    
+    function createToast(type, icon, title, text){
+        let newToast = document.createElement('div');
+        newToast.innerHTML = `
+            <div class="toast ${type}">
+                <i class="${icon}"></i>
+                <div class="content">
+                    <div class="title">${title}</div>
+                    <span>${text}</span>
+                </div>
+                <i class="fa-solid fa-xmark" onclick="(this.parentElement).remove()"></i>
+            </div>`;
+        notifications.appendChild(newToast);
+        newToast.timeOut = setTimeout(
+            ()=>newToast.remove(), 5000
+        )
+    }
+    success.onclick = function(){
+        let type = 'success';
+        let icon = 'fa-solid fa-circle-check';
+        let title = 'Success';
+        let text = 'This is a success toast.';
+        createToast(type, icon, title, text);
+    }
+    error.onclick = function(){
+        let type = 'error';
+        let icon = 'fa-solid fa-circle-exclamation';
+        let title = 'Error';
+        let text = 'This is a error toast.';
+        createToast(type, icon, title, text);
+    }
+    warning.onclick = function(){
+        let type = 'warning';
+        let icon = 'fa-solid fa-triangle-exclamation';
+        let title = 'Warning';
+        let text = 'This is a warning toast.';
+        createToast(type, icon, title, text);
+    }
+    info.onclick = function(){
+        let type = 'info';
+        let icon = 'fa-solid fa-circle-info';
+        let title = 'Info';
+        let text = 'This is a info toast.';
+        createToast(type, icon, title, text);
+    }
+</script>
+
+
+
+</body>
+</html>
